@@ -1,3 +1,9 @@
+$(function(){
+	bindLogout();
+	
+});
+
+
 $(document).data('pageDate', getDateFromParams());
 
 $(document).ready(function() {
@@ -14,10 +20,8 @@ $(document).ready(function() {
 
 function bindLogout() {
 	$('#logout').click(function() {
-		$.get('/wccr_functional/ajax/logout.php', function(data) {
-			if (data.success) {
-				window.location = '/wccr_functional/login.html';
-			}
+		$.post('/logout', function(data) {
+			window.location = '/login.html';
 		});
 	});
 }
