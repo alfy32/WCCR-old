@@ -1,0 +1,9 @@
+
+#newItem input, tr td input {
+	width: 80px;
+}
+
+#newItem input.item, tr td input.item {
+	width: 180px;
+}
+

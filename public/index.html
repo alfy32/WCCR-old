@@ -1,10 +1,122 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>WCCR</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	</head>
-	<body>
-		<p>WCCR Main Page</p>
-	</body>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>WCCR</title>
+		
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <!--<script src="js/lib/jquery.js" type="text/javascript"></script>-->
+        <script src="bootstrap/js/bootstrap.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+
+		
+    </head>
+    <body>
+
+        <div class="navbar navbar-inverse navbar-static-top" >
+			<a id="logout" style="float:right;margin-top: 10px;margin-right: 20px;">Logout</a>
+			<a id="user" style="float:right;margin-top: 10px;margin-right: 20px; text-decoration: none;">User</a>
+
+            <div class="navbar-inner">
+                <div class="nav-collapse collapse">
+                    <ul id="nav" class="nav">
+                        <li class=""><a href="?date=monday">Monday</a></li>
+                        <li class=""><a href="?date=tuesday">Tuesday</a></li>
+                        <li class=""><a href="?date=wednesday">Wednesday</a></li>
+                        <li class=""><a href="?date=thursday">Thursday</a></li>
+                        <li class=""><a href="?date=friday">Friday</a></li>
+                        <li class=""><a href="?date=saturday">Saturday</a></li>
+                        <li class=""><a href="?date=sunday">Sunday</a></li>
+                    </ul>
+                </div>
+
+                <h3 class="navbar-text text-center" style="margin-top: 0px;" id="date">Today's Date</h3>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Gross Weight</th>
+                    <th>Tare Weight</th>
+                    <th>Net Weight</th>
+                    <th>Cal/g</th>
+                    <th>Cal</th>
+                    <th></th> 
+                    <th></th>
+                </tr>
+                <tr id="newItem">
+                    <td><input type="text" class="item"/></td>
+                    <td><input type="text" class="gross"/></td>
+                    <td><input type="text" class="tare"/></td>
+                    <td><input type="text" class="net"/></td>
+                    <td><input type="text" class='calg'/></td>
+                    <td><input type="text" class='cal'/></td>
+                    <td><button id='add'>Add</button></td>
+                    <td><input type="hidden" id="newItemId"/></td>
+                </tr>
+            </thead>
+            <tbody id="wccr"></tbody>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>Budgeted</th>
+                    <th></th>
+                    <th></th>
+                    <th>Totals</th>
+                    <th></th>
+                    <th>Balance</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th colspan="2">Daily Total Cal</th>
+                    <th id='dailyBudgeted'></th>
+                    <th></th>
+                    <th></th>
+                    <th id="dailyTotal"></th>
+                    <th></th>
+                    <th id="dailyBalance"></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th colspan="2">Cumulative Weekly Total</th>
+                    <th id="weeklyBudgeted"></th>
+                    <th></th>
+                    <th></th>
+                    <th id="weeklyTotal"></th>
+                    <th></th>
+                    <th id="weeklyBalance"></th>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- Include my javascript at the bottom so the page loads first. -->
+		<script src="js/numberFormat.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script src="js/tableUtils.js" type="text/javascript"></script>
+
+
+    </body>
 </html>

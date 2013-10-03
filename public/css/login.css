@@ -1,0 +1,47 @@
+body {
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	background-color: #ccc;
+}
+
+#wrapper {
+	padding: 50px;
+	max-width: 500px;
+	background-color: white;
+	margin: 0 auto;
+	margin-top: 60px;
+	border-radius: 5px;
+	box-shadow: 0 0 20px 2px rgba(0,0,0,.5);
+}
+
+.title {
+	text-align: center;
+}
+
+.error {
+	text-align: center;
+	height: 17px;
+	color: red;
+}
+
+table {
+	text-align: right;
+	padding: 10px 0;
+	margin: auto;
+}
+
+.btn {
+	display: block;
+	width: 100px;
+	float: right;
+	font-size: 24px;
+}
+
+.no-account {
+	text-decoration: none;
+	position: relative;
+	top: 30px;
+}
+
+.no-account:hover {
+	text-decoration: underline;
+}
